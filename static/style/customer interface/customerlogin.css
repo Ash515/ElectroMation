@@ -1,0 +1,49 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main{
+    background-color: rgb(20, 14, 82);
+    color:white;
+    height: 100px;
+}
+#header{
+    padding-left: 550px;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+.login{
+    margin-left: 500px;
+    padding-top: 20px;
+   margin-top: 30px;
+   margin-right: 500px;
+   padding-left:125px;
+   padding-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    border-radius: 10px;
+}
+#login{
+    margin-left: 90px;
+}
+#EBID{
+    width:250px;
+    height: 30px;
+    border-color: indigo;
+}
+#passcode{
+    margin-top: 10px;
+    width:250px;
+    height: 30px;
+    border-color: indigo;
+}
+#submit{
+    margin-top: 10px;
+    margin-left: 75px;
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color:white;
+    cursor: pointer;
+    border-color: rgb(136, 127, 9);
+}
+

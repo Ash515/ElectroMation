@@ -1,0 +1,114 @@
+
+.col1 {
+    float: left;
+    width:350px;
+    padding: 10px;
+    
+    background-color: rgba(83, 81, 236, 0.199);
+    
+    height:710px; /* Should be removed. Only for demonstration */
+   
+   
+  }
+.col2{
+    background-color: white;
+    float: right;
+    width:1133px;
+    height:730px;
+    
+
+    /* Should be removed. Only for demonstration */
+  }
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.cust-info{
+    background-color: rgba(83, 81, 236, 0.199);
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 10px rgba(83, 81, 236, 0.199);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.others{
+    margin-top: 20px;
+}
+#help{
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: maroon;
+    height: 50px;
+    color:white
+}
+#previous-months{
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgb(19, 0, 128);
+    height: 50px;
+    color:white
+}
+#payment-history{
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgb(13, 156, 96);
+    height: 50px;
+    color:white
+}
+#head-lines{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-details{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    font-size: 14px;
+    margin-right: 250px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+#payment{
+    width:200px;
+    height:40px;
+    padding-top: 10px;
+    background-color: rgb(8, 8, 51);
+    margin-left: 150px;
+    color:white;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#payment:hover{
+background-color: rgba(8, 8, 51, 0.658);
+}
+#quote{
+    text-align: center;
+}
+#working{
+    margin-left: 90px;
+}
+.office-info{
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.footer{
+    text-align: center;
+    margin-top: 5px;
+}
