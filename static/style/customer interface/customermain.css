@@ -71,9 +71,10 @@
     color:white;
     width:350px;
 
-}
+} 
 .messages{
     font-size: 14px;
+    margin-left: 10px;
 }
 #inbox{
     width:320px;
@@ -182,4 +183,20 @@ textarea{
 }
 .back-inline{
     display: inline-flex;
+}
+.logout{
+    margin-top: 30px;
+    border-radius: 5px;
+    padding-top: 10px;
+    background-color: gray;
+    text-align: center;
+    cursor: pointer;
+    height: 35px;
+    font-size: 18px;
+}
+#logout{
+    color: white;
+}
+a{
+    text-decoration: none;
 }
