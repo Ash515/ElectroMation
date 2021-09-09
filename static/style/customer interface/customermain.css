@@ -38,40 +38,54 @@
 }
 #help{
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     cursor: pointer;
     border-radius: 10px;
     font-size: 18px;
     background-color: maroon;
     height: 50px;
-    color:white
+    color:white;
+    width:350px;
 }
 #previous-months{
     margin-top: 10px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     cursor: pointer;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     background-color: rgb(19, 0, 128);
     height: 50px;
-    color:white
+    color:white;
+    width:350px;
 }
 #payment-history{
     margin-top: 10px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     cursor: pointer;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     background-color: rgb(13, 156, 96);
     height: 50px;
-    color:white
+    color:white;
+    width:350px;
+
+}
+.messages{
+    font-size: 14px;
+}
+#inbox{
+    width:320px;
+    height: 150px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #head-lines{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .main-details{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 300px;
@@ -110,5 +124,62 @@ background-color: rgba(8, 8, 51, 0.658);
 }
 .footer{
     text-align: center;
-    margin-top: 5px;
+    margin-top: 25px;
+}
+.help-slide{
+    display: none;
+}
+#help-title{
+    text-align: center;
+    margin-left: 370px;
+}
+#back{
+    width:100px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 5px;
+    margin-left:30px;
+    color:white;
+   
+}
+#email{
+    margin-left: 350px;
+    height: 30px;
+    width: 410px;
+    border-color: brown;
+}
+textarea{
+    margin-top: 10px;
+    margin-left: 350px;
+    width:400px;
+    height: 250px;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    border-color: maroon;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#submit{
+    margin-top: 20px;
+    margin-left: 350px;
+    background-color: green;
+    color:white;
+    width:200px;
+    height: 30px;
+    text-align: center;
+}
+#reset{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgb(126, 81, 89);
+    color:white;
+    width:200px;
+    height: 30px;
+    text-align: center;
+}
+.back-inline{
+    display: inline-flex;
 }
