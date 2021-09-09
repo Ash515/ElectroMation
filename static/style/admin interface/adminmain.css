@@ -4,7 +4,7 @@
     width:350px;
     padding: 10px;
     
-    background-color: rgba(83, 81, 236, 0.199);
+    background-color: rgba(56, 173, 52, 0.459);
     
     height:710px; /* Should be removed. Only for demonstration */
    
@@ -24,8 +24,8 @@
     display: table;
     clear: both;
   }
-.cust-info{
-    background-color: rgba(83, 81, 236, 0.199);
+.admin-info{
+    background-color: rgba(109, 44, 60, 0.562);
     font-size: 14px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-shadow: 0 0 10px rgba(83, 81, 236, 0.199);
@@ -36,34 +36,38 @@
 .others{
     margin-top: 20px;
 }
-#help{
+#add-customer{
     text-align: center;
     padding-top: 10px;
     cursor: pointer;
     border-radius: 10px;
-    font-size: 18px;
-    background-color: maroon;
+    font-size: 16px;
+    background-color: rgba(13, 2, 104, 0.507);
     height: 50px;
     color:white;
     width:350px;
 }
 
-.messages{
-    font-size: 14px;
-    margin-left: 10px;
+
+#messages{
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgba(19, 19, 56, 0.781);
+    height: 50px;
+    color:white;
+    width:350px;
 }
-#inbox{
-    width:320px;
-    height: 150px;
-    font-size: 14px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 #head-lines{
     text-align: center;
+    color: rgb(13, 13, 82);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.main-details{
+main-details{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
@@ -101,7 +105,7 @@ background-color: rgba(8, 8, 51, 0.658);
 }
 .footer{
     text-align: center;
-    margin-top: 25px;
+    margin-top:20px;
 }
 .help-slide{
     display: none;
@@ -176,3 +180,35 @@ textarea{
 a{
     text-decoration: none;
 }
+#search{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#search-field{
+    width:200px;
+    border-radius: 5px;
+    height:30px;
+    border-color: indigo;
+}
+#search-field::placeholder{
+    padding-left: 10px;
+}
+#list-line{
+    cursor: pointer;
+    border-radius: 10px;
+    width:900px;
+    height:80px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-left: 30px;
+    
+}
+div.lists{
+    background-color: lightblue;
+    width: 1050px;
+    height: 500px;
+    overflow: auto;
+    margin-left: 40px;
+  }

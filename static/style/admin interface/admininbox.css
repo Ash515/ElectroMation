@@ -1,0 +1,60 @@
+
+.col1 {
+    float: left;
+    width:600px;
+   
+    
+    background-color: rgba(56, 173, 52, 0.459);
+    
+    height:710px; /* Should be removed. Only for demonstration */
+   
+   
+  }
+.col2{
+    background-color: white;
+    float: right;
+    width:900px;
+    height:710px;
+    
+
+    /* Should be removed. Only for demonstration */
+  }
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+#list-line{
+    cursor: pointer;
+    border-radius: 10px;
+    width:400px;
+    height:50px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-left: 30px;
+    
+}
+#head-lines{
+    margin-left: 30px;
+}
+div.message-lists{
+    background-color: lightblue;
+    width: 520px;
+    height: 600px;
+    overflow: auto;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  #search{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+#search-field{
+    width:200px;
+    border-radius: 5px;
+    height:30px;
+    border-color: indigo;
+}
