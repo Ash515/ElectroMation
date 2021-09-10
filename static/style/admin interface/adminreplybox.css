@@ -1,21 +1,31 @@
+
 .col1 {
     float: left;
     width:600px;
+   
+    
     background-color: rgba(56, 173, 52, 0.459);
+    
     height:710px; /* Should be removed. Only for demonstration */
+   
+   
   }
 .col2{
     background-color: white;
     float: right;
     width:900px;
     height:710px;
-}
+    
+
+    /* Should be removed. Only for demonstration */
+  }
  .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  #list-line{
+
+#list-line{
     cursor: pointer;
     border-radius: 10px;
     width:400px;
@@ -25,6 +35,7 @@
     padding-right: 20px;
     padding-top: 20px;
     margin-left: 30px;
+    
 }
 #head-lines{
     margin-left: 30px;
@@ -38,7 +49,7 @@ div.message-lists{
     margin-left: 30px;
     margin-top: 20px;
   }
-#search{
+  #search{
     margin-left: 40px;
     margin-top: 20px;
 }
@@ -86,6 +97,7 @@ div.message-lists{
   text-align: center;
   color:white;
   padding-top: 10px;
+  
 }
 #back{
   margin-left: 90px;
