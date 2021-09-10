@@ -39,6 +39,7 @@
 }
 #head-lines{
     margin-left: 30px;
+    color: pink;
 }
 div.message-lists{
     background-color: lightblue;
@@ -57,4 +58,55 @@ div.message-lists{
     border-radius: 5px;
     height:30px;
     border-color: indigo;
+}
+.default-image{
+  width:880px;
+  height: 565px;
+  background-image: url('/static/images/messsge.jpg');
+  background-size: cover;
+}
+.message-panel{
+  background-color: beige;
+  width:880px;
+  height:565px;
+  display: none;
+}
+#from{
+  background-color: rgba(119, 91, 197, 0.466);
+  margin-top: 10px;
+  padding-top: 10px;
+  height:30px;
+  padding-left: 20px;
+  color:white;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+.reply-back{
+  margin-top: 450px;
+  margin-left: 220px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#reply{
+  padding-left: 10px;
+  background-color: blue;
+  width:200px;
+  height: 30px;
+  text-align: center;
+  color:white;
+  padding-top: 10px;
+  
+}
+#back{
+  margin-left: 90px;
+  padding-left: 10px;
+  background-color: blue;
+  width:200px;
+  height: 30px;
+  text-align: center;
+  color:white;
+  padding-top: 10px;
+  margin-left: 30px;
 }
