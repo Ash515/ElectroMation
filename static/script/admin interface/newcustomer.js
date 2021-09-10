@@ -8,7 +8,7 @@ function passwordgen() {
 
     pass += str.charAt(char);
   }
-  var el_down = document.getElementById("cust-pass").value=pass;
+  var el_down = document.getElementById("custpass").value=pass;
   return pass;
 }
 
