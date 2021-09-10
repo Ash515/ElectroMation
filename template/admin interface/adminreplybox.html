@@ -2,47 +2,20 @@
 <html>
 <head>
     <title>Reply to Ashwin | Electricity Board</title>
-    <link rel="stylesheet" href="/static/style/admin interface/admininbox.css">
-    <script src="/static/script/admin interface/admininbox.js"></script>
+    <link rel="stylesheet" href="/static/style/admin interface/adminreplybox.css">
 </head>
 <body>
-    <div class="row">
-        <div class="col1">
-            <div id="search"><b>Search:</b> <input type="search" placeholder="Customer ID" id="search-field"></div>
-              <div class="message-lists">
-                <h3 id="list-line" onclick="messageclick()">5001</h3>
-                <h3 id="list-line"onclick="messageclick()">5002</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                </div>
-               
-            </div>
-        <div class="col2">
-            <h1 id="head-lines">Messages to Administrator </h1><hr>
-            <br>
-            <hr>
-            <div class="default-image"></div>
-            <div class="message-panel">
-               <h3 id="from">Message From Ashwin</h3>
-               <div class="reply-back">
-                <h3 id="reply">Reply</h3>
-                <h3 id="back">Back</h3>
-               </div>
-              
-            </div>
-            
-            </div>
-            
-        </div>
-            
+    <h3 id="back">Back</h3>
+    <div class="main">
+        <h2 id="headline">Reply to Ashwin</h2>
         
-            
+        <div class="reply-panel">
+            <form action="" method="post">
+                <input type="email" name="email" placeholder="Email" id="email">
+                <textarea name="reply-msg"></textarea><br>
+                <input type="submit" id="submit"><input type="reset" id="reset">
+            </form>
+           
         </div>
     </div>
 </body>
