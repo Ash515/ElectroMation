@@ -3,7 +3,7 @@
     <head>
         <title>Add New Customer | Electricity Board</title>
         <link rel="stylesheet" type="text/css" href="/static/style/admin interface/newcustomer.css">
-
+        <script src="/static/script/admin interface/newcustomer.js"></script>
     </head>
     <body>
         <div class="main">
@@ -16,7 +16,7 @@
             <input type="text" id="custaddress" placeholder="Address"name="cust-address"><br>
             <input type="text" id="custvillage" placeholder="Village" name="cust-village"><br>
             <input type="file" id="custproof" name="cust-proof"><br>
-            <button onclick="passwordgen()"  id="passgen-button">Generate Password</button><br>
+            <h3 onclick="passwordgen()"  id="passgen-button">Generate Password</h3><br>
             <input type="password" id="custpass" placeholder="Click the button to generate passcode" name="cust-pass"><br>
             <input type="submit" value="Register" id="submit">    
         </form>
