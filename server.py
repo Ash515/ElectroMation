@@ -5,7 +5,7 @@ app=Flask(__name__,template_folder='template')
 
 @app.route('/')
 def customerlogin():
-    return render_template('/admin interface/adminreplybox.html')
+    return render_template('/admin interface/newcustomer.html')
 
 if __name__=="__main__":
     app.run(debug=True)
