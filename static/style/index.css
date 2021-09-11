@@ -16,7 +16,15 @@
   animation: title 1s ease-in-out infinite alternate;
 }
 
-
+hr{
+  display: block;
+  
+ 
+  margin-left: 250px;
+  margin-right: 20px;
+  border-style:outset;
+  border-width: 1px;
+}
 
 
 
@@ -123,7 +131,7 @@ a{
     margin-top: 20px;
     float:left;
     width:700px;
-    background-image: url('/static/images/middle.jpeg');
+    background-image: url('/static/images/middle.png');
   background-size: cover;
    
     height:500px; /* Should be removed. Only for demonstration */
@@ -184,6 +192,19 @@ a{
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 10px;
+}
+.innerbox4{
+  margin-left: 150px;
+  background-color: green;
+  width:400px;
+  height:200px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.459);
+  background-color:white;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
 }
 .freq{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
