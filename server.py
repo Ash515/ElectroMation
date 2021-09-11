@@ -28,12 +28,57 @@ def customerlogin():
             session['loggedin'] = True
             session['EBID'] = customer['ebid']
             session['passcode'] = customer['password']
-            return redirect(url_for('main'))
+            return redirect(url_for('custmain'))
         else:
             # Account doesnt exist or username/password incorrect
              message = 'Incorrect username/password!'
     return render_template('/customer interface/customerlogin.html', message='')
 
+@app.route('/adminlogin',methods=['POST','GET'])
+def adminlogin():
+    message="Please fill the login "
+    if request.method=='POST':
+        adminname=request.form['adminid']
+        adminpassword=request.form['adminpass']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM admincredentials WHERE username = %s AND password = %s', (adminname,adminpassword))
+        admin=cursor.fetchone()
+        if admin:
+            session['loggedin'] = True
+            session['adminid'] = admin['username']
+            session['adminpass'] = admin['password']
+            return redirect(url_for('adminmain'))
+        else:
+            # Account doesnt exist or username/password incorrect
+             message = 'Incorrect username/password!'
+    return render_template('/admin interface/adminlogin.html', message='')
 
+@app.route('/customermain')
+def custmain():
+    if 'loggedin' in session:
+        eb_id=session['EBID']
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM customerregistration where ebid=%s',(eb_id,))
+        detail=cur.fetchall()
+    return render_template('/customer interface/customermain.html',Ebid=detail)
+
+@app.route('/adminmain')
+def adminmain():
+    if 'loggedin' in session:
+        admin_id=session['adminid']
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM admincredentials where username=%s',(admin_id,))
+        admindetail=cur.fetchall()
+    return render_template('/admin interface/adminmain.html',Admin_id=admindetail)
+
+@app.route('/customerlogout')
+def customerlogout():
+   session.pop('EBID')
+   return redirect(url_for('index'))
+
+@app.route('/adminlogout')
+def adminlogout():
+   session.pop('adminid')
+   return redirect(url_for('index'))
 if __name__=="__main__":
     app.run(debug=True)
