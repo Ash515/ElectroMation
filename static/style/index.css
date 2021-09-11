@@ -220,6 +220,7 @@ a{
   cursor: pointer;
   margin-left: 200px;
   padding-top: 20px;
+  
 }
 #answer1{
   display: none;
@@ -276,7 +277,7 @@ a{
   margin-left: 650px;
 }
 #contact-tagline{
-  margin-left: 610;
+  margin-left: 620px;
   color:green;
 }
 .contact-box{
@@ -291,14 +292,19 @@ a{
   padding-bottom: 50px;
 }
 #name{
-  width:230px;
+  width:228px;
+  height: 40px;
+  padding-left: 10px;
+}
+#email{
+  width:217px;
   height: 40px;
   padding-left: 10px;
 }
 #subject{
   padding-left: 10px;
   margin-top: 10px;
-  width:465px;
+  width:462px;
   height: 40px;
 }
 textarea{
@@ -334,7 +340,7 @@ border-radius: 10px;
 .col5{
   float: left;
   width:500px;
-  background-image: url('/static/images/recieve.jpg');
+  background-image: url('/static/images/contact.jpg');
   background-size: cover;
 
   height:500px; /* Should be removed. Only for demonstration */
