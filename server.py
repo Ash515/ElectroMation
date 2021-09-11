@@ -12,8 +12,28 @@ app.config['MYSQL_DB']="electromation"
 mysql=MySQL(app)
 
 @app.route('/')
-def customerlogin():
+def index():
     return render_template('index.html')
+
+@app.route('/customerlogin',methods=['POST','GET'])
+def customerlogin():
+    message="Please fill the login "
+    if request.method=='POST':
+        ebid=request.form['EBID']
+        passcode=request.form['passcode']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM customerregistration WHERE ebid = %s AND password = %s', (ebid, passcode))
+        customer=cursor.fetchone()
+        if customer:
+            session['loggedin'] = True
+            session['EBID'] = customer['ebid']
+            session['passcode'] = customer['password']
+            return redirect(url_for('main'))
+        else:
+            # Account doesnt exist or username/password incorrect
+             message = 'Incorrect username/password!'
+    return render_template('/customer interface/customerlogin.html', message='')
+
 
 if __name__=="__main__":
     app.run(debug=True)
