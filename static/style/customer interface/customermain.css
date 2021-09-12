@@ -47,6 +47,19 @@
     color:white;
     width:350px;
 }
+#notification{
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgb(30, 17, 88);
+    height: 50px;
+    color:white;
+    width:350px;
+}
+
 
 .messages{
     font-size: 14px;
@@ -100,10 +113,7 @@ background-color: rgba(8, 8, 51, 0.658);
     box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
     padding-top: 10px;
     padding-bottom: 20px;
-}
-.footer{
-    text-align: center;
-    margin-top: 25px;
+    height:200px;
 }
 .help-slide{
     display: none;
@@ -181,4 +191,22 @@ background-color: rgba(8, 8, 51, 0.658);
 }
 a{
     text-decoration: none;
+}
+.notify{
+    display: none;
+}
+ul{
+    list-style: none;
+}
+.notify{
+
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    border-radius: 10px;
+  background-color: rgba(255, 255, 0, 0.562);
+  width:800px;
+  height:50px;
+  padding-top: 3px;
+
 }

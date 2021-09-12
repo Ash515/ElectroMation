@@ -112,6 +112,28 @@ def proceed():
         
     return render_template('/admin interface/proceed.html')
 
+@app.route('/helpcenter',methods=['POST','GET'])
+def helpcenter():
+    if request.method=='POST':
+        ebid=request.form['EBID']
+        msg=request.form['message']
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('INSERT INTO customermessage VALUES(%s,%s)',(ebid,msg,))
+        mysql.connection.commit()
+        return redirect(url_for('custmain'))
+
+@app.route('/adminrecieved',methods=['POST','GET'])
+def adminrecieved():
+    cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute('SELECT * FROM customermessage')
+    messagedetails=cur.fetchall()
+    return render_template('/admin interface/admininbox.html',customermessage=messagedetails)
+
+
+
+
+
+
 
 @app.route('/notify',methods=['POST','GET'])
 def notify():

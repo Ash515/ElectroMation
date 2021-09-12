@@ -20,12 +20,17 @@
                 <div class="others">
                     <button id="help" onclick="helponclick()">Help</button>
                 </div>
+                <div class="notification">
+                    <button id="notification"  onclick="notifyclick()">Notifications</button>
+                </div>
+
                 <div class="messages">      
                     {% for k in payment %}
                     <h2>Inbox</h2><hr>
                     <textarea id="inbox" readonly>{{k.msg}}</textarea>
                     {% endfor %}
                 </div>
+                
                 <div class="logout">
                    <a href="{{url_for('customerlogout')}}" id="logout">Logout</a>
                 </div>
@@ -67,9 +72,15 @@
                     <input type="submit" id="submit"><input type="reset" id="reset">
                 </form>
             </div>
-            <div class="footer">
-                Copy Right @Electricity Board Portal 2021
-            </div>
+            <!--Help Center-->
+            <div class="notify">
+                <ul id="notify-ul">
+                      <li>Dont use load over</li>
+                </ul>
+                
+                 
+                </div>
+           
         </div>
     </div>
 </body>

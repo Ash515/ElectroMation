@@ -24,7 +24,7 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    margin-left: 30px;
+    
 }
 #head-lines{
     margin-left: 30px;
@@ -43,10 +43,17 @@ div.message-lists{
     margin-top: 20px;
 }
 #search-field{
-    width:200px;
+    width:430px;
     border-radius: 5px;
-    height:30px;
-    border-color: indigo;
+    height:40px;
+   
+    margin-left: 20px;
+   
+}
+#msg-area{
+  margin-left: 200px;
+  width:500px;
+  height:200px;
 }
 .default-image{
   width:880px;
@@ -57,7 +64,7 @@ div.message-lists{
 .message-panel{
   background-color: beige;
   width:880px;
-  height:565px;
+  height:500px;
   display: none;
 }
 #from{
@@ -71,7 +78,8 @@ div.message-lists{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 .reply-back{
-  margin-top: 450px;
+  
+  margin-top: 10px;
   margin-left: 220px;
   font-size: 14px;
   cursor: pointer;
@@ -86,6 +94,12 @@ div.message-lists{
   text-align: center;
   color:white;
   padding-top: 10px;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
 }
 #back{
   margin-left: 90px;

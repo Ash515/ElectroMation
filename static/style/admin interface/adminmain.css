@@ -52,7 +52,10 @@
     color:white;
     width:350px;
 }
-
+a{
+    text-decoration: none;
+    
+}
 
 #messages{
     text-align: center;

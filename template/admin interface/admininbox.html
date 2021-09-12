@@ -8,42 +8,32 @@
 <body>
     <div class="row">
         <div class="col1">
-            <div id="search"><b>Search:</b> <input type="search" placeholder="Customer ID" id="search-field"></div>
+            <div id="search"><b>Search:</b> <input type="search" onkeyup="Filter()" placeholder="Customer ID" id="search-field"></div>
               <div class="message-lists">
-                <h3 id="list-line" onclick="messageclick()">5001</h3>
-                <h3 id="list-line"onclick="messageclick()">5002</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                </div>
-               
+                  {% for i in customermessage %}
+                  <ul id="myUl">
+                    <li><h3 id="list-line" onclick="messageclick()"><a href="#">{{i.ebid}}</a></h3></li>
+                </ul>
+                {% endfor %}
+            </div>
             </div>
         <div class="col2">
+            {% for j in customermessage %}
             <h1 id="head-lines">Messages to Administrator </h1><hr>
             <br>
             <hr>
             <div class="default-image"></div>
             <div class="message-panel">
-               <h3 id="from">Message From Ashwin</h3>
-               <div class="reply-back">
+               <h3 id="from">Message From <b>{{j.ebid}}</b></h3>
+               <textarea id="msg-area" readonly>{{j.message}}</textarea>
+               {% endfor %}
+           
+            <div class="reply-back">
                 <h3 id="reply">Reply</h3>
-                <h3 id="back">Back</h3>
-               </div>
-              
+                <h3 id="back" onclick="back()">Back</h3>
             </div>
-            
             </div>
-            
+         </div>
         </div>
-            
-        
-            
-        </div>
-    </div>
 </body>
 </html>
