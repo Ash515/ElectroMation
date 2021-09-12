@@ -74,12 +74,12 @@
             </div>
             <!--Help Center-->
             <div class="notify">
+                {% for i in adminreply %}
                 <ul id="notify-ul">
-                      <li>Dont use load over</li>
+                      <li>{{i.msg}}</li>
                 </ul>
-                
-                 
-                </div>
+                {% endfor %}
+            </div>
            
         </div>
     </div>

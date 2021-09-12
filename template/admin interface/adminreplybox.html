@@ -5,17 +5,18 @@
     <link rel="stylesheet" href="/static/style/admin interface/adminreplybox.css">
 </head>
 <body>
-    <h3 id="back">Back</h3>
+    <h3 id="back"><a href="/adminrecieved"><font color="white">Back</font></a></h3>
     <div class="main">
         <h2 id="headline">Reply to Ashwin</h2>
         
         <div class="reply-panel">
+            {% for i in adminreply %}
             <form action="" method="post">
-                <input type="email" name="email" placeholder="Email" id="email">
-                <textarea name="reply-msg"></textarea><br>
+                <input type="text" name="EBID" value={{i.ebid}} id="ebid" readonly>
+                <textarea placeholder="Type your message..." name="reply-msg"></textarea><br>
                 <input type="submit" id="submit"><input type="reset" id="reset">
             </form>
-           
+            {% endfor %}
         </div>
     </div>
 </body>

@@ -129,7 +129,20 @@ def adminrecieved():
     messagedetails=cur.fetchall()
     return render_template('/admin interface/admininbox.html',customermessage=messagedetails)
 
-
+@app.route('/adminreply/<ebid>',methods=['POST','GET'])
+def adminreply(ebid):
+     if request.method=='POST':
+        Ebid=request.form['EBID']
+        msg=request.form['reply-msg']
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('INSERT INTO adminreply VALUES(%s,%s)',(Ebid,msg,))
+        mysql.connection.commit()
+        return redirect(url_for('adminrecieved'))
+    
+     cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+     cur.execute('SELECT * FROM adminreply WHERE ebid=%s',(ebid,))
+     replydetails=cur.fetchall()
+     return render_template('/admin interface/adminreplybox.html',adminreply=replydetails)
 
 
 

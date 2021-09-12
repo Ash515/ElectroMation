@@ -26,12 +26,13 @@
             <div class="message-panel">
                <h3 id="from">Message From <b>{{j.ebid}}</b></h3>
                <textarea id="msg-area" readonly>{{j.message}}</textarea>
-               {% endfor %}
+              
            
             <div class="reply-back">
-                <h3 id="reply">Reply</h3>
+                <h3 id="reply"><a href="/adminreply/{{j.ebid}}"><font color="white">Reply</font></h3>
                 <h3 id="back" onclick="back()">Back</h3>
             </div>
+            {% endfor %}
             </div>
          </div>
         </div>

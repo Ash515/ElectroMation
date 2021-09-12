@@ -10,16 +10,26 @@ body{
     color:white;
     font-size:20px;
 }
-#email{
+#ebid{
     width:500px;
     height:30px; 
-    font-size: 18px;
+    font-size: 16px;
+}
+#ebid::placeholder{
+    padding-left: 10px;
 }
 textarea{
     margin-top: 20px;
     width:500px;
     height:300px;
     font-size: 18px;
+}
+textarea::placeholder{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+a{
+    text-decoration: none;
 }
 #submit{
     margin-top: 20px;
@@ -36,7 +46,7 @@ textarea{
     height:30px;
     cursor: pointer;
     margin-left: 30px;
-    background-color: pink;
+    background-color: rgb(85, 28, 38);
     color:white;
 }
 #back{
