@@ -25,13 +25,18 @@
     clear: both;
   }
 .admin-info{
-    background-color: rgba(109, 44, 60, 0.562);
+    background-color: rgba(58, 133, 89, 0.562);
     font-size: 14px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-shadow: 0 0 10px rgba(83, 81, 236, 0.199);
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+#myUl{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 .others{
     margin-top: 20px;
@@ -181,14 +186,20 @@ a{
     text-decoration: none;
 }
 #search{
-    margin-left: 30px;
+    margin-left: 55px;
     margin-top: 20px;
 }
 #search-field{
-    width:200px;
-    border-radius: 5px;
-    height:30px;
+
     border-color: indigo;
+    background-repeat: no-repeat;
+    width: 500px;
+    height:30px;
+    margin-left: 45px;
+    font-size: 16px;
+    padding-left: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
 }
 #search-field::placeholder{
     padding-left: 10px;
@@ -202,7 +213,7 @@ a{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    margin-left: 30px;
+    margin-left: 50px;
     
 }
 div.lists{

@@ -30,17 +30,17 @@
             <h1 id="head-lines">Electricity Board - Tambaram Administrator </h1><hr>
             <div class="main-slide">
             <div class="main-details">
-               <div id="search"><b>Search:</b> <input type="search" placeholder="Customer ID" id="search-field"></div>
+               <div id="search"><b>Search:</b> <input type="search" onkeyup="Filter()" placeholder="Customer ID" id="search-field"></div>
             </div><br>
             <hr>
             <div class="lists">
-                <h3 id="list-line">5001</h3>
-                <h3 id="list-line">5002</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
-                <h3 id="list-line">Ashwin</h3>
+            
+                <ul id="myUl">
+                    {% for i in customer_list %}
+                    <li><h3 id="list-line"><a href="/readingpage/{{i.ebid}}">{{i.ebid}} <br> {{i.name}}</a></h3></li>
+                   {% endfor %}
+                </ul>
+                
             </div>
             
             </div>

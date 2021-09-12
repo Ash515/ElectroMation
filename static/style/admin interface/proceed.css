@@ -1,0 +1,42 @@
+body{
+    background-color:beige ;
+    background-image: url('/static/images/proceed.png');
+    background-size: cover;
+}
+.main{
+    margin-left: 500px;
+    margin-top: 30px;
+    background-color: rgba(54, 58, 71, 0.521);
+    width:500px;
+    height:500px;
+}
+#headlines{
+    text-align: center;
+    color:white;
+    padding-top: 20px;
+}
+input{
+    width:200px;
+    height:30px;
+}
+#eb{
+    color:white;
+    padding-left:100px ;
+}
+#EB{
+    margin-left: 77px;
+}
+#pay{
+    padding-left: 100px;
+    color:white;
+}
+textarea{
+    width:340px;
+    margin-left: 100px;
+    height:150px;
+}
+#submit{
+    margin-left: 170px;
+    margin-top: 20px;
+    cursor: pointer;
+}

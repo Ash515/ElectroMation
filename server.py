@@ -69,7 +69,10 @@ def adminmain():
         cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM admincredentials where username=%s',(admin_id,))
         admindetail=cur.fetchall()
-    return render_template('/admin interface/adminmain.html',Admin_id=admindetail)
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM customerregistration')
+        customerlist=cur.fetchall()
+    return render_template('/admin interface/adminmain.html',Admin_id=admindetail,customer_list=customerlist)
 
 @app.route('/customerlogout')
 def customerlogout():
@@ -80,5 +83,29 @@ def customerlogout():
 def adminlogout():
    session.pop('adminid')
    return redirect(url_for('index'))
+
+@app.route('/readingpage/<ebid>',methods=['POST','GET'])
+def readingpage(ebid):
+     
+     cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+     cur.execute('SELECT * FROM estimation where ebid=%s',(ebid,))
+     readingdetails=cur.fetchall()
+     return render_template('/admin interface/adminentry.html',readings=readingdetails)
+
+@app.route('/proceed',methods=["POST","GET"])
+def proceed():
+    if request.method=='POST':
+        ebid=request.form['EBID']
+        amt=request.form['payment']
+        msg=request.form['payment-msg']
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('INSERT INTO paymentdetails VALUES(%s,%s,%s)',(ebid,amt,msg))
+       
+        return redirect(url_for('notify'))
+    return render_template('/admin interface/proceed.html')
+
+@app.route('/notify',methods=['POST','GET'])
+def notify():
+    return render_template('notify.html')
 if __name__=="__main__":
     app.run(debug=True)

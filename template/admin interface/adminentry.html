@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>5005 | Reading </title>
+    {% for i in readings %}
+    <title>{{i.ebid}} | Reading </title>
     <link rel="stylesheet" href="/static/style/admin interface/adminentry.css">
     <script src="/static/script/admin interface/adminentry.js"></script>
 </head>
@@ -16,24 +17,20 @@
         <div class="col2">
          
 
-            <h3 id="ebid"><input type="text" value="5001 Ashwin Kumar R" id="text" readonly></h3>
+            <h3 id="ebid">EB ID - <input type="text" value="{{i.ebid}}" id="text" readonly></h3>
             
         
 
              
             <div class="main">
                
-                <h3>Month: <input type="text" id="entry-month" readonly></h3>
-                <h3>Units: <input type="text" id="entry-units" readonly></h3>
-                <h3>Amount: <input type="text" id="entry-amount" readonly></h3><br>
-                Enter the Payment Details
-                <form action="" methods="">
-                    <button onclick="myFunction()" id="copy-button">Copy EB ID</button> 
-                    <h3>EB ID: <input type="text" id="EB" name="EB"></h3>
-                    <h3>Payment Date: <input type="text" name="payment"id="entry-payment"></h3>
-                    <textarea typ   e="text" placeholder="Type your message here..." name="payment-msg"></textarea><br>
-                    <input type="submit" id="submit">
-                </form>
+                <h3>Month: <input type="text" id="entry-month" value={{i.month}} readonly></h3>
+                <h3>Units: <input type="text" id="entry-units" value={{i.units}} readonly></h3>
+                <h3>Amount: <input type="text" id="entry-amount" value={{i.amount}} readonly></h3><br>
+                <button onclick="myFunction()" id="copy-button">Copy EB ID</button> 
+               <br>
+               <h3 id="proceed"><a href="/proceed">Proceed</a></h3>
+                {% endfor %}
             </div>
             </div>
             
