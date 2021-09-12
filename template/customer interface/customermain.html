@@ -20,9 +20,11 @@
                 <div class="others">
                     <button id="help" onclick="helponclick()">Help</button>
                 </div>
-                <div class="messages">
+                <div class="messages">      
+                    {% for k in payment %}
                     <h2>Inbox</h2><hr>
-                    <input type="text" id="inbox" readonly>
+                    <textarea id="inbox" readonly>{{k.msg}}</textarea>
+                    {% endfor %}
                 </div>
                 <div class="logout">
                    <a href="{{url_for('customerlogout')}}" id="logout">Logout</a>
@@ -32,11 +34,16 @@
             <h1 id="head-lines">Electricity Board - Tambaram</h1><hr>
             <div class="main-slide">
             <div class="main-details">
-                <h2 id="month">Month:</h2>
-                <h2 id="units">Units:</h2>
-                <h2 id="amount">Amount:</h2>
-                <h2 id="paymentdate">Last Date for Payment:</h2>
+                {% for i in estimation %}
+               
+                <h2 id="month">Month:&nbsp;&nbsp; {{i.month}}</h2>
+                <h2 id="units">Units:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i.units}}</h2>
+                <h2 id="amount">Amount:&nbsp;&nbsp;{{i.amount}}</h2>
+                {% endfor %}
+                {% for j in payment %}
+                <h2 id="paymentdate">Last Date for Payment:&nbsp;&nbsp;{{j.date}}</h2>
                 <h3 id="payment">Pay now</h3>
+                {% endfor %}
             </div><br><br>
             <hr>
             <div class="office-info">
@@ -54,9 +61,9 @@
             <div class="help-slide">
                <div class="back-inline"><button id="back" onclick="helponbackclick()">Back</button> <h3 id="help-title">Help Center</h3>
                 </div>
-                <form action="" method="POST">
-                    <input type="email" placeholder="Email" name="Email" id="email"><br>
-                    <textarea name="message" placeholder="Message"></textarea><br>
+                <form action="/helpcenter" method="POST">
+                    <input type="text" placeholder="EB ID" name="EBID" id="email"><br>
+                    <textarea id="msg-area" name="message" placeholder="Message"></textarea><br>
                     <input type="submit" id="submit"><input type="reset" id="reset">
                 </form>
             </div>

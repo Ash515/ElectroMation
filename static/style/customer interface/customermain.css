@@ -53,6 +53,8 @@
     margin-left: 10px;
 }
 #inbox{
+    padding-left: 10px;
+    padding-top: 10px;
     width:320px;
     height: 150px;
     font-size: 14px;
@@ -129,7 +131,10 @@ background-color: rgba(8, 8, 51, 0.658);
     width: 410px;
     border-color: brown;
 }
-textarea{
+#email::placeholder{
+    padding-left: 10px;
+}
+#msg-area{
     margin-top: 10px;
     margin-left: 350px;
     width:400px;
@@ -139,6 +144,7 @@ textarea{
     border-color: maroon;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 #submit{
     margin-top: 20px;
     margin-left: 350px;

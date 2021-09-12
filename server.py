@@ -60,7 +60,14 @@ def custmain():
         cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM customerregistration where ebid=%s',(eb_id,))
         detail=cur.fetchall()
-    return render_template('/customer interface/customermain.html',Ebid=detail)
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM estimation where ebid=%s',(eb_id,))
+        estimationdetail=cur.fetchall()
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM paymentdetails where ebid=%s',(eb_id,))
+        paymentdetail=cur.fetchall()
+
+    return render_template('/customer interface/customermain.html',payment=paymentdetail,estimation=estimationdetail,Ebid=detail)
 
 @app.route('/adminmain')
 def adminmain():
@@ -99,10 +106,12 @@ def proceed():
         amt=request.form['payment']
         msg=request.form['payment-msg']
         cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur.execute('INSERT INTO paymentdetails VALUES(%s,%s,%s)',(ebid,amt,msg))
-       
-        return redirect(url_for('notify'))
+        cur.execute('INSERT INTO paymentdetails VALUES(%s,%s,%s)',(ebid,amt,msg,))
+        mysql.connection.commit()
+        return redirect(url_for('adminmain'))
+        
     return render_template('/admin interface/proceed.html')
+
 
 @app.route('/notify',methods=['POST','GET'])
 def notify():

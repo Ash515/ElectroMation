@@ -29,7 +29,7 @@
                 <h3>Amount: <input type="text" id="entry-amount" value={{i.amount}} readonly></h3><br>
                 <button onclick="myFunction()" id="copy-button">Copy EB ID</button> 
                <br>
-               <h3 id="proceed"><a href="/proceed">Proceed</a></h3>
+               <h3 id="proceed"><a href="{{url_for('proceed')}}">Proceed</a></h3>
                 {% endfor %}
             </div>
             </div>
