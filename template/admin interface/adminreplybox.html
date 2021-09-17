@@ -10,13 +10,13 @@
         <h2 id="headline">Reply to Ashwin</h2>
         
         <div class="reply-panel">
-            {% for i in adminreply %}
+           
             <form action="" method="post">
-                <input type="text" name="EBID" value={{i.ebid}} id="ebid" readonly>
+                <input type="text" name="EBID" id="ebid"  placeholder="EB ID">
                 <textarea placeholder="Type your message..." name="reply-msg"></textarea><br>
                 <input type="submit" id="submit"><input type="reset" id="reset">
             </form>
-            {% endfor %}
+            
         </div>
     </div>
 </body>

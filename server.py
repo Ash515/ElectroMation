@@ -66,8 +66,11 @@ def custmain():
         cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM paymentdetails where ebid=%s',(eb_id,))
         paymentdetail=cur.fetchall()
+        cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM adminreply WHERE ebid=%s',(eb_id,))
+        replydetails=cur.fetchall()
 
-    return render_template('/customer interface/customermain.html',payment=paymentdetail,estimation=estimationdetail,Ebid=detail)
+    return render_template('/customer interface/customermain.html',payment=paymentdetail,estimation=estimationdetail,Ebid=detail,adminreply=replydetails)
 
 @app.route('/adminmain')
 def adminmain():
@@ -138,11 +141,11 @@ def adminreply(ebid):
         cur.execute('INSERT INTO adminreply VALUES(%s,%s)',(Ebid,msg,))
         mysql.connection.commit()
         return redirect(url_for('adminrecieved'))
-    
      cur=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
      cur.execute('SELECT * FROM adminreply WHERE ebid=%s',(ebid,))
      replydetails=cur.fetchall()
-     return render_template('/admin interface/adminreplybox.html',adminreply=replydetails)
+     
+     return render_template('/admin interface/adminreplybox.html',adminrep=replydetails)
 
 
 

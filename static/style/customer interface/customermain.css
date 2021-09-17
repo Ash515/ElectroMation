@@ -198,7 +198,7 @@ a{
 ul{
     list-style: none;
 }
-.notify{
+/*.notify{
 
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -209,4 +209,12 @@ ul{
   height:50px;
   padding-top: 3px;
 
+}*/
+li{
+    background-color: yellow;
+    height: 50px;
+    width:500px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
 }
