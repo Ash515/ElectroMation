@@ -4,5 +4,5 @@ Electromation is the new innovation to bring solution to electrical enery consum
 ## Technologies
 Python, C, Automations, Arduino Programming,JavaScript,MySQL.
 
-## Developer
+## Developer ❤
 Ashwin Kumar R
