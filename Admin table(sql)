@@ -1,0 +1,5 @@
+create table admin
+(
+username varchar(100)
+password varchar(8)
+);
