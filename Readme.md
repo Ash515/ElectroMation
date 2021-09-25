@@ -10,16 +10,12 @@
 - This project is implemented, and this idea got shortlisted at Accenture Innovation Challenge 2021.
 
 
-• Frontend - JavaScript, HTML/CSS.
-• Backend - Python, Flask Framework, REST API's, C++.
-• Database - PostgreSQL, SQL.
-• Arduino Programming.
-• Automations.
-
-
-
 ## Technologies
-
+- Frontend - JavaScript, HTML/CSS.
+- Backend - Python, Flask Framework, REST API's, C++.
+- Database - PostgreSQL, SQL.
+- Arduino Programming.
+- Automations.
 
 ## Developer ❤
 Ashwin Kumar R
