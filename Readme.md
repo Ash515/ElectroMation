@@ -17,5 +17,8 @@
 - Arduino Programming.
 - Automations.
 
+## Licence
+MIT 
+
 ## Developer ❤
 Ashwin Kumar R
