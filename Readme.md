@@ -18,7 +18,7 @@
 - Automations.
 
 ## Licence
-MIT 
+[MIT] 
 
 ## Developer ❤
 Ashwin Kumar R
