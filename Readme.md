@@ -21,4 +21,4 @@
 [MIT](https://github.com/Ash515/ElectroMation/blob/master/LICENSE)
 
 ## Developer ❤
-Ashwin Kumar R
+[Ashwin Kumar R](https://github.com/Ash515)
