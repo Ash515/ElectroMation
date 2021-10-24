@@ -15,7 +15,7 @@
 - Backend - Python, Flask Framework, REST API's, C++.
 - Database - PostgreSQL, SQL.
 - Arduino Programming.
-- Automations.
+- Automation.
 
 ## Licence
 [MIT](https://github.com/Ash515/ElectroMation/blob/master/LICENSE)
